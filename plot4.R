@@ -68,6 +68,6 @@ with(hpc, plot(
     type = "l",
     lwd = 1,
     xlab = "datetime", 
-    ylab = "Voltage"))
+    ylab = "Global_reactive_power"))
 
 dev.off()
