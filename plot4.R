@@ -4,7 +4,7 @@ if(!exists("hpc")){
     hpc <- DownloadAndReadHouseholdPowerConsumptionData()
 }
 
-png(file="plot4.png",width=480,height=480)
+png(file="plot4.png",width=480,height=480, bg ="transparent")
 
 par(mfcol = c(2,2))
 

@@ -4,7 +4,7 @@ if(!exists("hpc")){
     hpc <- DownloadAndReadHouseholdPowerConsumptionData()
 }
 
-png(file="plot3.png",width=480,height=480)
+png(file="plot3.png",width=480,height=480, bg ="transparent")
 
 with(hpc, plot(
     x = c(DateTime, DateTime, DateTime),
