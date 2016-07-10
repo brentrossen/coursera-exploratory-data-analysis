@@ -18,33 +18,31 @@ with(hpc, plot(
     ylab = "Global Active Power"))
 
 # Lower Left Plot
-with(hpc, plot(
-    x = c(DateTime, DateTime, DateTime),
-    y = c(Sub_metering_1, Sub_metering_2, Sub_metering_3),
+with(hpc, {
+    plot(
+    x = DateTime,
+    y = Sub_metering_1,
     type = "n",
     xlab = "", 
-    ylab = "Energy sub metering"))
-
-with(hpc,
-     lines(DateTime,
+    ylab = "Energy sub metering")
+    lines(DateTime,
            Sub_metering_1,
            col = "black",
            lwd = 1
-     ))
+    )
 
-with(hpc,
-     lines(DateTime,
+    lines(DateTime,
            Sub_metering_2,
            col = "red",
            lwd = 1
-     ))
+    )
 
-with(hpc,
-     lines(DateTime,
+    lines(DateTime,
            Sub_metering_3,
            col = "blue",
            lwd = 1
-     ))
+    )
+})
 
 legend("topright", 
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
